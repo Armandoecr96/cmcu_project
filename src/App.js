@@ -16,7 +16,10 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 
 const serverInsideNavigation = createStackNavigator({
   Home: {
-    screen: Home
+    screen: Home,
+    navigationOptions: {
+      header: null,
+    }
   }
 })
 
@@ -36,13 +39,22 @@ const ClientNavigation = createDrawerNavigator({
 
 const AuthNavigator = createStackNavigator({
   Login: {
-    screen: Login
+    screen: Login,
+    navigationOptions: {
+      header: null,
+    }
   },
   Server: {
-    screen: ServerNavigation
+    screen: ServerNavigation,
+    navigationOptions: {
+      header: null,
+    }
   },
   Client: {
-    screen: ClientNavigation
+    screen: ClientNavigation,
+    navigationOptions: {
+      header: null,
+    }
   }
 });
 
