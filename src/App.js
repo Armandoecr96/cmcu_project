@@ -8,7 +8,8 @@
 
 
 import Login from './login/Login'
-import Home from './home/Home'
+import Home from './Customer/Home'
+import SellerHome from './Seller/sellerHome'
 
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
@@ -16,7 +17,7 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 
 const serverInsideNavigation = createStackNavigator({
   Home: {
-    screen: Home
+    screen: SellerHome
   }
 })
 
@@ -38,10 +39,10 @@ const AuthNavigator = createStackNavigator({
   Login: {
     screen: Login
   },
-  Server: {
+  Seller: {
     screen: ServerNavigation
   },
-  Client: {
+  Customer: {
     screen: ClientNavigation
   }
 });
