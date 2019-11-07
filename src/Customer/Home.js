@@ -1,22 +1,114 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, Card, CardItem, Text, Icon, Right } from 'native-base';
+import { Container, Header, Content, List, ListItem, Thumbnail, Text, Left, Body, Right, Button, Card, Item, Icon, Input, View } from 'native-base';
 export default class Home extends Component {
-  render() {
-    return (
-      <Container>
-        <Header />
-        <Content>
-          <Card>
-            <CardItem>
-              <Icon active name="logo-googleplus" />
-              <Text>Google Plus</Text>
-              <Right>
-                <Icon name="arrow-forward" />
-              </Right>
-             </CardItem>
-           </Card>
-        </Content>
-      </Container>
-    );
-  }
+    render() {
+        return (
+            <Container>
+                <Header searchBar rounded>
+                    <Item>
+                        <Icon name="ios-search" />
+                        <Input placeholder="Search" />
+                        <Icon name="ios-people" />
+                    </Item>
+                    <Button transparent>
+                        <Text>Search</Text>
+                    </Button>
+                </Header>
+                <Content>
+                  <View>
+                    <Text>Categorias</Text>
+                  </View>
+
+
+                    <List>
+                        <ListItem thumbnail>
+                            <Card style={{ width: '92%', height: 80, flexDirection: 'row' }}>
+                                <Left>
+                                  <Thumbnail square source={require('../../media/images/electricista.jpg')} />
+                                </Left>
+                                <Body>
+                                    <Text>Holitas</Text>
+                                    <Text note numberOfLines={1}>Its time to build a difference . .</Text>
+                                </Body>
+                                <Right>
+                                    <Button transparent>
+                                        <Text>View</Text>
+                                    </Button>
+                                </Right>
+                            </Card>
+                        </ListItem>
+
+                        <ListItem thumbnail>
+                            <Card style={{ width: '92%', height: 80, flexDirection: 'row' }}>
+                                <Left>
+                                  <Thumbnail square source={require('../../media/images/contratista.jpg')} />
+                                </Left>
+                                <Body>
+                                    <Text>Holitas</Text>
+                                    <Text note numberOfLines={1}>Its time to build a difference . .</Text>
+                                </Body>
+                                <Right>
+                                    <Button transparent>
+                                        <Text>View</Text>
+                                    </Button>
+                                </Right>
+                            </Card>
+                        </ListItem>
+
+                        <ListItem thumbnail>
+                            <Card style={{ width: '92%', height: 80, flexDirection: 'row' }}>
+                                <Left>
+                                    <Thumbnail square source={require('../../media/images/albañil.jpg')} />
+                                </Left>
+                                <Body>
+                                    <Text>Holitas</Text>
+                                    <Text note numberOfLines={1}>Its time to build a difference . .</Text>
+                                </Body>
+                                <Right>
+                                    <Button transparent>
+                                        <Text>View</Text>
+                                    </Button>
+                                </Right>
+                            </Card>
+                        </ListItem>
+
+                        <ListItem thumbnail>
+                            <Card style={{ width: '92%', height: 80, flexDirection: 'row' }}>
+                                <Left>
+                                  <Thumbnail square source={require('../../media/images/plomero.jpg')} />
+                                </Left>
+                                <Body>
+                                    <Text>Holitas</Text>
+                                    <Text note numberOfLines={1}>Its time to build a difference . .</Text>
+                                </Body>
+                                <Right>
+                                    <Button transparent>
+                                        <Text>View</Text>
+                                    </Button>
+                                </Right>
+                            </Card>
+                        </ListItem>
+
+                        <ListItem thumbnail>
+                            <Card style={{ width: '92%', height: 80, flexDirection: 'row' }}>
+                                <Left>
+                                  <Thumbnail square source={require('../../media/images/game-icon4.png')} />
+                                </Left>
+                                <Body>
+                                    <Text>Holitas</Text>
+                                    <Text note numberOfLines={1}>Its time to build a difference . .</Text>
+                                </Body>
+                                <Right>
+                                    <Button transparent>
+                                        <Text>View</Text>
+                                    </Button>
+                                </Right>
+                            </Card>
+                        </ListItem>
+
+                    </List>
+                </Content>
+            </Container>
+        );
+    }
 }

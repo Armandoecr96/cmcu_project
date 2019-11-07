@@ -29,8 +29,11 @@ const ServerNavigation = createDrawerNavigator({
 })
 
 const clientInsideNavigation = createStackNavigator({
-  Home: {
-    screen: Home
+  HomeCustomer: {
+    screen: Home,
+    navigationOptions: {
+      header: null,
+    }
   }
 })
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, List, ListItem, Thumbnail, Text, Left, Body, Right, Button, Card, Item, Icon, Input } from 'native-base';
-export default class ListThumbnailExample extends Component {
+export default class Home extends Component {
     render() {
         return (
             <Container>
