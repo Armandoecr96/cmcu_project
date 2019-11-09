@@ -10,6 +10,9 @@
 import Login from './login/Login'
 import Home from './Customer/Home'
 import SellerHome from './Seller/sellerHome'
+import createAdd from './Seller/createAdd'
+import myAdds from './Seller/myAdds'
+import seeAdd from './Common/SeeAdd'
 
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
@@ -52,6 +55,27 @@ const AuthNavigator = createStackNavigator({
     screen: ServerNavigation,
     navigationOptions: {
       header: null,
+    }
+  },
+  Add:{
+    screen: createAdd,
+    navigationOptions: {
+      header: null
+    }
+  },
+  MyAdds:{
+    screen: myAdds,
+    navigationOptions: {
+      header: null
+    }
+  },
+  SeeAdd:{
+    screen: seeAdd,
+    navigationOptions: {
+      headerStyle:{
+        backgroundColor: '#3F51B5'
+      },
+      headerTintColor: '#FFFFFF'
     }
   },
   Customer: {

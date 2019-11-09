@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native'
 import { Container, Header, Content, List, ListItem, 
     Thumbnail, Text, Left, Body, Right, Button, Card, Item, Icon, 
     Input, View, Footer, FooterTab } from 'native-base';
-export default class Home extends Component {
+export default class myAdds extends Component {
     render() {
         return (
             <Container>
@@ -75,50 +75,18 @@ export default class Home extends Component {
                             </Card>
                         </ListItem>
 
-                        <ListItem thumbnail>
-                            <Card style={{ width: '92%', height: 80, flexDirection: 'row' }}>
-                                <Left>
-                                  <Thumbnail square source={require('../../media/images/plomero.jpg')} />
-                                </Left>
-                                <Body>
-                                    <Text>Holitas</Text>
-                                    <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-                                </Body>
-                                <Right>
-                                    <Button transparent>
-                                        <Text>View</Text>
-                                    </Button>
-                                </Right>
-                            </Card>
-                        </ListItem>
-
-                        <ListItem thumbnail>
-                            <Card style={{ width: '92%', height: 80, flexDirection: 'row' }}>
-                                <Left>
-                                  <Thumbnail square source={require('../../media/images/game-icon4.png')} />
-                                </Left>
-                                <Body>
-                                    <Text>Holitas</Text>
-                                    <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-                                </Body>
-                                <Right>
-                                    <Button transparent>
-                                        <Text>View</Text>
-                                    </Button>
-                                </Right>
-                            </Card>
-                        </ListItem>
-
                     </List>
                 </Content>
                 <Footer>
                   <FooterTab>
-                    <Button vertical active>
-                      <Icon active name="ios-home" style={styles.Icon}/>
+                    <Button vertical 
+                    onPress={()=>this.props.navigation.navigate('Seller')}>
+                      <Icon name="ios-home" style={styles.Icon}/>
                       <Text>Inicio</Text>
                     </Button>
-                    <Button vertical>
-                      <Icon type="FontAwesome" name="inbox" style={styles.Icon}/>
+                    <Button vertical active
+                    onPress={()=>this.props.navigation.navigate('MyAdds')}>
+                      <Icon active type="FontAwesome" name="inbox" style={styles.Icon}/>
                       <Text style={styles.tabMenuMin}>Mis Anuncios</Text>
                     </Button>
                     <Button vertical
