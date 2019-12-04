@@ -3,6 +3,8 @@ import {StyleSheet} from 'react-native'
 import { Container, Header, Content, List, ListItem, 
     Thumbnail, Text, Left, Body, Right, Button, Card, Item, Icon, 
     Input, View, Footer, FooterTab } from 'native-base';
+import SellerFooterTabs from '../Common/SellerFooterTabs';
+
 export default class myAdds extends Component {
     render() {
         return (
@@ -78,31 +80,7 @@ export default class myAdds extends Component {
                     </List>
                 </Content>
                 <Footer>
-                  <FooterTab>
-                    <Button vertical 
-                    onPress={()=>this.props.navigation.navigate('Seller')}>
-                      <Icon name="ios-home" style={styles.Icon}/>
-                      <Text>Inicio</Text>
-                    </Button>
-                    <Button vertical active
-                    onPress={()=>this.props.navigation.navigate('MyAdds')}>
-                      <Icon active type="FontAwesome" name="inbox" style={styles.Icon}/>
-                      <Text style={styles.tabMenuMin}>Mis Anuncios</Text>
-                    </Button>
-                    <Button vertical
-                    onPress={()=>this.props.navigation.navigate('Add')}>
-                      <Icon name="add-circle" style={styles.Icon}/>
-                      <Text style={styles.tabMenuMax}>Anuncia</Text>
-                    </Button>
-                    <Button vertical>
-                      <Icon name="md-chatbubbles" style={styles.Icon}/>
-                      <Text style={styles.tabMenuMax}>Mensajes</Text>
-                    </Button>
-                    <Button vertical>
-                      <Icon type="MaterialIcons" name="history" style={styles.Icon}/>
-                      <Text style={styles.tabMenuMax}>Historial</Text>
-                    </Button>
-                  </FooterTab>
+                    <SellerFooterTabs navigation={this.props.navigation} />
                 </Footer>
             </Container>
         );

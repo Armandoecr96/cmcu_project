@@ -3,41 +3,24 @@ import {StyleSheet} from 'react-native'
 import { Container, Header, Content, List, ListItem, 
     Thumbnail, Text, Left, Body, Right, Button, Card, Item, Icon, 
     Input, View, Footer, FooterTab } from 'native-base';
+import SellerFooterTabs from '../Common/SellerFooterTabs';
 export default class createAdd extends Component {
     render() {
         return (
             <Container>
                 <Content>
                   <View>
-                      <Text>Hola</Text>
+                      <Text>Falata Header, Multipick y Añadir imagen</Text>
+                      <Input placeholder="Titulo" />
+                      <Input placeholder="Categoria" />
+                      <Input placeholder="Horario" />
+                      <Input placeholder="Costo" />
+                      <Input placeholder="Descripcion" />
+
                   </View>
                 </Content>
                 <Footer>
-                  <FooterTab>
-                    <Button vertical
-                    onPress={()=>this.props.navigation.navigate('Seller')}>
-                      <Icon name="ios-home" style={styles.Icon}/>
-                      <Text>Inicio</Text>
-                    </Button>
-                    <Button vertical
-                    onPress={()=> this.props.navigation.navigate('MyAdds')}>
-                      <Icon type="FontAwesome" name="inbox" style={styles.Icon}/>
-                      <Text style={styles.tabMenuMin}>Mis Anuncios</Text>
-                    </Button>
-                    <Button vertical active
-                    onPress={()=>this.props.navigation.navigate('Add')}>
-                      <Icon active name="add-circle" style={styles.Icon}/>
-                      <Text style={styles.tabMenuMax}>Anuncia</Text>
-                    </Button>
-                    <Button vertical>
-                      <Icon name="md-chatbubbles" style={styles.Icon}/>
-                      <Text style={styles.tabMenuMax}>Mensajes</Text>
-                    </Button>
-                    <Button vertical>
-                      <Icon type="MaterialIcons" name="history" style={styles.Icon}/>
-                      <Text style={styles.tabMenuMax}>Historial</Text>
-                    </Button>
-                  </FooterTab>
+                  <SellerFooterTabs navigation={this.props.navigation} />
                 </Footer>
             </Container>
         );

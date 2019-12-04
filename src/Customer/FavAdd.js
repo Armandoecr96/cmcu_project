@@ -3,9 +3,9 @@ import {StyleSheet} from 'react-native'
 import { Container, Header, Content, List, ListItem, 
     Thumbnail, Text, Left, Body, Right, Button, Card, Item, Icon, 
     Input, View, Footer, FooterTab, CardItem } from 'native-base';
-import SellerFooter from '../Common/SellerFooterTabs'
+import CustFooterTabs from '../Common/CustFooterTabs'
 
-export default class sellerHome extends Component {
+export default class FavAdd extends Component {
 
     toggleDrawer = () => {
         this.props.navigation.toggleDrawer();
@@ -31,8 +31,9 @@ export default class sellerHome extends Component {
                     <View style={{width:'100%', paddingBottom:20}}>
                         <Text style={{fontWeight:'bold', fontSize:25,
                         textAlign:'left', marginLeft:20, paddingBottom:10, paddingTop:10}}>Categorias</Text>
+
                         <View style={{flexDirection:'row', marginLeft:10}}>
-                            <Button active bordered rounded info style={{width:'25%'}}>
+                            <Button bordered rounded info style={{width:'25%'}}>
                                 <Text style={{fontSize:12, fontWeight:'bold'}}>Plomero</Text>
                             </Button>
                             <Button bordered rounded info style={{width:'30%'}}>
@@ -50,12 +51,12 @@ export default class sellerHome extends Component {
 
 
                   <View style={{width:'100%'}}>
-                    <Text style={{fontWeight:'bold', fontSize:18,
-                    textAlign:'left', marginLeft:20}}>Contratos</Text>
+                    <Text style={{fontWeight:'bold', fontSize:15,
+                    textAlign:'left', marginLeft:20}}>Tus Contratos Favoritos</Text>
                   </View>
 
-                  <List>
-                        <ListItem thumbnail button onPress={()=> this.props.navigation.navigate('SeeAdd')}>
+                    <List>
+                        <ListItem thumbnail button onPress={()=> this.props.navigation.navigate('CustomerSeeAdd')}>
                             <Card style={{ width: '92%', height: 80, flexDirection: 'row' }}>
                                   <Thumbnail square large source={require('../../media/images/electricista.jpg')} />
                                 <Body style={{height:'100%', width:'100%', paddingLeft:10}}>
@@ -79,7 +80,7 @@ export default class sellerHome extends Component {
                             </Card>
                         </ListItem>
 
-                        <ListItem thumbnail button onPress={()=> this.props.navigation.navigate('SeeAdd')}>
+                        <ListItem thumbnail button onPress={()=> this.props.navigation.navigate('CustomerSeeAdd')}>
                             <Card style={{ width: '92%', height: 80, flexDirection: 'row' }}>
                                   <Thumbnail square large source={require('../../media/images/albañil.jpg')} />
                                 <Body style={{height:'100%', width:'100%', paddingLeft:10}}>
@@ -103,30 +104,7 @@ export default class sellerHome extends Component {
                             </Card>
                         </ListItem>
 
-                        <ListItem thumbnail button onPress={()=> this.props.navigation.navigate('SeeAdd')}>
-                            <Card style={{ width: '92%', height: 80, flexDirection: 'row' }}>
-                                  <Thumbnail square large source={require('../../media/images/contratista.jpg')} />
-                                <Body style={{height:'100%', width:'100%', paddingLeft:10}}>
-                                    <CardItem transparent style={{paddingBottom:0, paddingTop:0, paddingLeft:0, paddingRight: 5}}>
-                                        <Body>
-                                            <Text>Contratista Bueno</Text>   
-                                        </Body>
-                                        <Right style={{marginLeft:-50}}>
-                                            <Text>
-                                                <Icon name="star" style={{color:'#D8DC54', fontSize:20}}></Icon>
-                                                <Icon name="star" style={{color:'#D8DC54', fontSize:20}}></Icon>
-                                                <Icon name="star" style={{color:'#D8DC54', fontSize:20}}></Icon>
-                                                <Icon name="star" style={{color:'#D8DC54', fontSize:20}}></Icon>
-                                            </Text>        
-                                        </Right>
-                                    </CardItem>
-                                    
-                                    <Text note numberOfLines={2} style={{width:'100%'}}>Its time to build a difference for the planet and the universe. .</Text>
-                                </Body>
-                            </Card>
-                        </ListItem>
-
-                        <ListItem thumbnail button onPress={()=> this.props.navigation.navigate('SeeAdd')}>
+                        <ListItem thumbnail button onPress={()=> this.props.navigation.navigate('CustomerSeeAdd')}>
                             <Card style={{ width: '92%', height: 80, flexDirection: 'row' }}>
                                   <Thumbnail square large source={require('../../media/images/plomero.jpg')} />
                                 <Body style={{height:'100%', width:'100%', paddingLeft:10}}>
@@ -147,52 +125,10 @@ export default class sellerHome extends Component {
                                 </Body>
                             </Card>
                         </ListItem>
-
-                        <ListItem thumbnail button onPress={()=> this.props.navigation.navigate('SeeAdd')}>
-                            <Card style={{ width: '92%', height: 80, flexDirection: 'row' }}>
-                                  <Thumbnail square large source={require('../../media/images/game-icon4.png')} />
-                                <Body style={{height:'100%', width:'100%', paddingLeft:10}}>
-                                    <CardItem transparent style={{paddingBottom:0, paddingTop:0, paddingLeft:0, paddingRight: 5}}>
-                                        <Body>
-                                            <Text>Fontanero Italiano</Text>   
-                                        </Body>
-                                        <Right style={{marginLeft:-50}}>
-                                            <Text>
-                                                <Icon name="star" style={{color:'#D8DC54', fontSize:20}}></Icon>
-                                                <Icon name="star" style={{color:'#D8DC54', fontSize:20}}></Icon>
-                                            </Text>        
-                                        </Right>
-                                    </CardItem>
-                                    
-                                    <Text note numberOfLines={2} style={{width:'100%'}}>Its time to build a difference for the planet and the universe. .</Text>
-                                </Body>
-                            </Card>
-                        </ListItem>
-
-                        <ListItem thumbnail button onPress={()=> this.props.navigation.navigate('SeeAdd')}>
-                            <Card style={{ width: '92%', height: 80, flexDirection: 'row' }}>
-                                  <Thumbnail square large source={require('../../media/images/albañil2.jpg')} />
-                                <Body style={{height:'100%', width:'100%', paddingLeft:10}}>
-                                    <CardItem transparent style={{paddingBottom:0, paddingTop:0, paddingLeft:0, paddingRight: 5}}>
-                                        <Body>
-                                            <Text>Albañil Honrado</Text>   
-                                        </Body>
-                                        <Right style={{marginLeft:-50}}>
-                                            <Text>
-                                                <Icon name="star" style={{color:'#D8DC54', fontSize:20}}></Icon>
-                                            </Text>        
-                                        </Right>
-                                    </CardItem>
-                                    
-                                    <Text note numberOfLines={2} style={{width:'100%'}}>Its time to build a difference for the planet and the universe. .</Text>
-                                </Body>
-                            </Card>
-                        </ListItem>
-
                     </List>
                 </Content>
                 <Footer>
-                  <SellerFooter navigation={this.props.navigation}/>
+                  <CustFooterTabs navigation={this.props.navigation}/>
                 </Footer>
             </Container>
         );
