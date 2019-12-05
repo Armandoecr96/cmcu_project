@@ -3,11 +3,11 @@ import {StyleSheet, Image, Alert} from 'react-native'
 import { Container, Header, Content, List, ListItem, 
     Thumbnail, Text, Left, Body, Right, Button, Card, Item, Icon, 
     Input, View, Footer, FooterTab, CardItem, Form, Label, Picker, Textarea } from 'native-base';
-import SellerFooterTabs from '../Common/SellerFooterTabs';
+import CustFooterTabs from '../Common/CustFooterTabs';
 import ImagePicker from 'react-native-image-picker';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 
-export default class Profile extends Component {
+export default class CustomerProfile extends Component {
 
     constructor(props){
         super(props)
@@ -76,27 +76,12 @@ export default class Profile extends Component {
                                 />  
                             </CardItem>
                             <Button primary onPress={this.chooseFile.bind(this)}>
-                                    <Text>Seleccionar Logo</Text>
+                                    <Text>Seleccionar Foto</Text>
                                 </Button>          
                         </Card>
                         <Form>
                             <Item stackedLabel style={{marginBottom: 40}}>
-                                <Label>Nombre Completo de Responsable</Label>
-                                <Input />
-                            </Item>
-
-                            <Item stackedLabel style={{marginBottom: 40}}>
-                                <Label>Telefono de Responsable</Label>
-                                <Input />
-                            </Item>
-
-                            <Item stackedLabel style={{marginBottom: 40}}>
-                                <Label>Correo Electrónico de Responsable</Label>
-                                <Input />
-                            </Item>
-                            
-                            <Item stackedLabel style={{marginBottom: 40}}>
-                                <Label>Nombre de la Empresa</Label>
+                                <Label>Nombre Completo</Label>
                                 <Input />
                             </Item>
 
@@ -104,10 +89,20 @@ export default class Profile extends Component {
                                 <Label>Dirección</Label>
                                 <Input />
                             </Item>
-{/* 
+
+                            <Item stackedLabel style={{marginBottom: 40}}>
+                                <Label>Telefono</Label>
+                                <Input />
+                            </Item>
+
+                            <Item stackedLabel style={{marginBottom: 40}}>
+                                <Label>Correo Electrónico</Label>
+                                <Input />
+                            </Item>                           
+
                             <Item stackedLabel style={{marginBottom: 40}}>
                                 <Label>Fecha de Nacimiento</Label>
-                                <Input />
+                                <Input  />
                                 <DateTimePicker
                                 isVisible={this.state.isDateTimePickerVisible}
                                 onConfirm={this.handleDatePicked}
@@ -116,16 +111,6 @@ export default class Profile extends Component {
                                 />
                                 <Button onPress={this.showDateTimePicker}
                                 ><Text>Seleccionar Fecha</Text></Button>
-                            </Item> */}
-
-                            <Item stackedLabel style={{marginBottom: 40}}>
-                                <Label>Telefono de Oficina</Label>
-                                <Input />
-                            </Item>
-
-                            <Item stackedLabel style={{marginBottom: 40}}>
-                                <Label>Correo Empresarial</Label>
-                                <Input />
                             </Item>
 
                         </Form>
@@ -135,7 +120,7 @@ export default class Profile extends Component {
                   </View>
                 </Content>
                 <Footer>
-                  <SellerFooterTabs navigation={this.props.navigation} />
+                  <CustFooterTabs navigation={this.props.navigation} />
                 </Footer>
             </Container>
         );

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {StyleSheet, Image} from 'react-native'
+import {StyleSheet, Image, Alert} from 'react-native'
 import { Container, Header, Content, List, ListItem, 
     Thumbnail, Text, Left, Body, Right, Button, Card, Item, Icon, 
     Input, View, Footer, FooterTab, CardItem, Textarea } from 'native-base';
@@ -70,7 +70,7 @@ export default class SeeAdd extends Component {
                         conubia habitant mi tincidunt luctus fames.</Textarea>
                     </View>
                     <View style={{alignSelf:'center', paddingTop:10, paddingBottom:15}}>
-                        <Button rounded success large>
+                        <Button rounded style={{backgroundColor:'green', color:'#fff'}} large onPress={() => Alert.alert('Contratación Exitosa',"Tu solicitud ha sido enviada al Responsable del Servicio, espera confirmación")}>
                             <Text style={{color:'#fff', fontWeight:'normal'}}>Contratar</Text>
                         </Button>
                     </View>

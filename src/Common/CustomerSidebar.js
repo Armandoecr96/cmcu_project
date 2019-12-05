@@ -14,7 +14,7 @@ export default class CustomerSidebar extends Component{
               mainHeading: 'Mi Perfil',
               typeIcon: "Entypo",
               icon: "user",
-              window: "Login"
+              window: "CustomerProfile"
             },
             {
               mainHeading: 'Mis Reseñas Realizadas',

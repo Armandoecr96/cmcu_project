@@ -35,6 +35,8 @@ import CustomerSidebar from './Common/CustomerSidebar'
 import SeeAddCustomer from './Common/SeeAddCustomer'
 import FavAdd from './Customer/FavAdd'
 import RecoAdd from './Customer/RecoAdd'
+import Profile from './Common/Profile'
+import CustomerProfile from './Common/CustomerProfile'
 
 
 // class NavigationDrawerStructure extends Component {
@@ -84,7 +86,7 @@ const sellerInsideNavigation = createStackNavigator({
 
 const SellerNavigation = createDrawerNavigator({
   HomeBar: sellerInsideNavigation,
-  SellerPerfil: sellerInsideNavigation,
+  SellerPerfil: Profile,
   SellerReseñas: sellerInsideNavigation,
   Settings: sellerInsideNavigation,
   Legal: sellerInsideNavigation,
@@ -128,6 +130,7 @@ const customerInsideNavigation = createStackNavigator({
 
 const CustomerNavigation = createDrawerNavigator({
   HomeBarCust: customerInsideNavigation,
+  CustomerProfile: CustomerProfile,
   CustomerReseñas: customerInsideNavigation,
   SettingsCust: customerInsideNavigation,
   Legal: customerInsideNavigation,

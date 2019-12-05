@@ -14,7 +14,7 @@ export default class Sidebar extends Component{
             mainHeading: 'Mi Perfil',
             typeIcon: "Entypo",
             icon: "user",
-            window: "Login"
+            window: "SellerPerfil"
           },
           {
             mainHeading: 'Reseñas de Anuncios',
